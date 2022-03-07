@@ -8,7 +8,7 @@ This is a simple PHP script that is used for filtering Apache HTTP Server logs. 
 
 ## Use Case
 
-I've been monitoring the HTTP traffic on some servers and realized that the logs contained a lot of entries for IP addresses that were *known*. This PHP script compares the log entry IP address with **known** addresses and CIDR and filters out the matches.
+I've been monitoring the HTTP traffic on some servers and realized that the logs contained a lot of entries for IP addresses that were *known*. This PHP script compares the log entry IP address with **known** addresses and CIDR and filters out the matches. And the result is a less cluttered and easier to read log file.
 
 ## Filters
 
