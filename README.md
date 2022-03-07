@@ -50,3 +50,21 @@ php aplogfilter.php example.log filtered.log
 64.71.131.244 - - [06/Mar/2022:13:22:59 -0600] "GET / HTTP/1.1" 302 - "-" "Mozilla/5.0 (compatible; ev-crawler/1.0; +https://headline.com/legal/crawler)"
 ```
 
+## Error Messages
+
+If an error occurs the script will exit and display a message on the console. 
+
+|           **Message**           |                  **Meaning**                 |
+|:-------------------------------:|:--------------------------------------------:|
+| need input log file name        | The first argument is missing                |
+| (file) does not exist           | The input log file does not exist            |
+| need output file name           | The second argument is missing               |
+| bad filter file                 | The `filter.json` file is missing or corrupt |
+| cannot open for output - (file) | Could not open the output file               |
+| unknown line - (log entry)      | The entry line was not recognizable          |
+| error writing to (file)         | Could not write to the output file           |
+| cannot open for input - (file)  | Could not open the log file                  |
+
+Where "(file)" is a file name, and "(log entry)" is a line in the log file.
+
+On success "(file)  has been saved".
