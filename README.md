@@ -68,3 +68,9 @@ If an error occurs the script will exit and display a message on the console.
 Where "(file)" is a file name, and "(log entry)" is a line in the log file.
 
 On success "(file)  has been saved".
+
+# Future
+
+
+---
+<img src="http://webexperiment.info/extcounter/mdcount.php?id=apache-log_filter">
