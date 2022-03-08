@@ -1,6 +1,6 @@
 # Apache Log Filter
 
-This is a simple PHP script that is used for filtering Apache HTTP Server logs. They contain entries like this - 
+This is a simple PHP script that is used for filtering Apache HTTP Server logs. They contain log entries similar to this - 
 
 ```
 114.119.130.31 - - [06/Mar/2022:07:59:43 -0600] "GET /robots.txt HTTP/1.1" 403 - "-" "Mozilla/5.0 (compatible;PetalBot;+https://webmaster.petalsearch.com/site/petalbot)"
