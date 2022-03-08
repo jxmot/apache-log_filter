@@ -1,6 +1,6 @@
 # Apache Log Filter
 
-This is a simple PHP script that is used for filtering Apache HTTP Server logs. They contain entries like this - 
+This is a simple PHP script that is used for filtering Apache HTTP Server logs. They contain log entries similar to this - 
 
 ```
 114.119.130.31 - - [06/Mar/2022:07:59:43 -0600] "GET /robots.txt HTTP/1.1" 403 - "-" "Mozilla/5.0 (compatible;PetalBot;+https://webmaster.petalsearch.com/site/petalbot)"
@@ -12,7 +12,7 @@ I've been monitoring the HTTP traffic on some servers and realized that the logs
 
 ## Filters
 
-**filter.json**:
+**aplogfilter.json**:
 ```
 {
     "iplist": [
@@ -26,10 +26,10 @@ I've been monitoring the HTTP traffic on some servers and realized that the logs
 ## Usage
 
 ```
-php aplogfilter.php example.log filtered.log
+php run.php example.log filtered.log
 ```
 
-## Example
+### Example
 
 **example.log**:
 ```
@@ -73,7 +73,7 @@ On success: "(file) has been saved".
 
 # Possible Issues
 
-* Large files, like 1meg or larger may impact execution speed.
+* Large files, like several megabytes or larger may impact execution speed.
 * A large quantity of IP filters may impact execution speed.
 
 # Known Issues
@@ -88,7 +88,7 @@ I'm planning on adding more "filters". Which may include:
 * HTTP response code
 * User Agent
 
-The current IP filter *removes* entries, but the new filters may have the ability to either exclude or only include filter matches. I will also investigate using 2 or more filters *in combination*. It is likely that filter selection will be done via a JSON file that is used to select the desired filters.
+The current IP filter *removes* entries, but the new filters may have the ability to either exclude or only include filter matches. I will also investigate using 2 or more filters *in combination*.
 
 ---
 <img src="http://webexperiment.info/extcounter/mdcount.php?id=apache-log_filter">
