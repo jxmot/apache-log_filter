@@ -42,6 +42,8 @@ php aplogfilter.php example.log filtered.log
 192.168.0.27 - - [06/Mar/2022:23:28:26 -0600] "GET / HTTP/1.1" 403 - "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.97 Safari/537.36"
 ```
 
+A larger log file is also provided for testing, it is `large_example.log`.
+
 **filtered.log**:
 ```
 114.119.130.31 - - [06/Mar/2022:07:59:43 -0600] "GET /robots.txt HTTP/1.1" 403 - "-" "Mozilla/5.0 (compatible;PetalBot;+https://webmaster.petalsearch.com/site/petalbot)"
@@ -67,10 +69,26 @@ If an error occurs the script will exit and display a message on the console.
 
 Where "(file)" is a file name, and "(log entry)" is a line in the log file.
 
-On success "(file)  has been saved".
+On success: "(file) has been saved".
+
+# Possible Issues
+
+* Large files, like 1meg or larger may impact execution speed.
+* A large quantity of IP filters may impact execution speed.
+
+# Known Issues
+
+This section will be updated when ever new issues are discovered, but not yet resolved.
 
 # Future
 
+I'm planning on adding more "filters". Which may include:
+
+* HTTP method
+* HTTP response code
+* User Agent
+
+The current IP filter *removes* entries, but the new filters may have the ability to either exclude or only include filter matches. I will also investigate using 2 or more filters *in combination*. It is likely that filter selection will be done via a JSON file that is used to select the desired filters.
 
 ---
 <img src="http://webexperiment.info/extcounter/mdcount.php?id=apache-log_filter">
