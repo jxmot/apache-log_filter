@@ -29,7 +29,7 @@ I've been monitoring the HTTP traffic on some servers and realized that the logs
 php run.php example.log filtered.log
 ```
 
-## Example
+### Example
 
 **example.log**:
 ```

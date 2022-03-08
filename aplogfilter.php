@@ -40,12 +40,14 @@ $ret->m = '';
                         $unkip = substr($line, 0, $end);
                         // compare the unknown IP address against the filters...
                         foreach($filter->iplist as $filterip) {
+                            // is the current filter a CIDR?
                             if(iscidr($filterip)) {
                                 if(cidrmatch($unkip, $filterip)) {
                                     $ipfound = true;
                                     break;
                                 }
                             } else {
+                                // look for an exact match
                                 if($filterip === $unkip) {
                                     $ipfound = true;
                                     break;
